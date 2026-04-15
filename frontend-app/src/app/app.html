@@ -1,0 +1,28 @@
+<div class="app-container">
+  <div class="header">
+    <div class="header-left">
+      <span class="logo">🤖</span>
+      <div>
+        <h1>AI Chat</h1>
+        <span class="subtitle">Powered by Shri Ram</span>
+      </div>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 20px">
+      <div class="status">
+        <span class="status-dot"></span>
+        Online
+      </div>
+      <button class="clear-btn" (click)="clearChat()">🗑️ Clear</button>
+    </div>
+  </div>
+
+  <app-chat-window
+    [messages]="messages"
+    [isLoading]="isLoading"
+    (suggestionClicked)="handleMessage($event)"
+  >
+  </app-chat-window>
+
+  <app-chat-input (messageSent)="handleMessage($event)"> </app-chat-input>
+</div>
