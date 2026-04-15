@@ -9,10 +9,16 @@
 
 ### Backend
 cd backend-app
+
 pip install -r requirements.txt
+
+
 python app.py
 
 ### Frontend
 cd frontend-app
+
 npm install
+
 ng serve
+
